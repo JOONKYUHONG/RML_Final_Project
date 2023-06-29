@@ -35,15 +35,15 @@
 
 
 * **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
-* **How training data was divided into training and validation data**: 50% training, 25% validation, 25% test
+* **How training data was divided into training and validation data**: 70% training, 30% validation
 * **Number of rows in training and validation data**:
-  * Training rows: 15,000
-  * Validation rows: 7,500
+  * Training rows: 112253 rows
+  * Validation rows: 48085 rows
 
 ### Test Data
 * **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
-* **Number of rows in test data**: 7,500
-* **State any differences in columns between training and test data**: None
+* **Number of rows in test data**: 19831
+* **State any differences in columns between training and test data**: Training data contains 23 rows, while Test data contains 22 rows since we need to predict the target variable.
 
 ### Model details
 * **Columns used as inputs in the final model**: 'LIMIT_BAL',
