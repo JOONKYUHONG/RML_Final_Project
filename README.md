@@ -19,19 +19,20 @@
 
 * Data dictionary: 
 
-| Name | Modeling Role | Measurement Level| Description|
-| ---- | ------------- | ---------------- | ---------- |
-|**ID**| ID | int | unique row indentifier |
-| **LIMIT_BAL** | input | float | amount of previously awarded credit |
-| **SEX** | demographic information | int | 1 = male; 2 = female
-| **RACE** | demographic information | int | 1 = hispanic; 2 = black; 3 = white; 4 = asian |
-| **EDUCATION** | demographic information | int | 1 = graduate school; 2 = university; 3 = high school; 4 = others |
-| **MARRIAGE** | demographic information | int | 1 = married; 2 = single; 3 = others |
-| **AGE** | demographic information | int | age in years |
-| **PAY_0, PAY_2 - PAY_6** | inputs | int | history of past payment; PAY_0 = the repayment status in September, 2005; PAY_2 = the repayment status in August, 2005; ...; PAY_6 = the repayment status in April, 2005. The measurement scale for the repayment status is: -1 = pay duly; 1 = payment delay for one month; 2 = payment delay for two months; ...; 8 = payment delay for eight months; 9 = payment delay for nine months and above |
-| **BILL_AMT1 - BILL_AMT6** | inputs | float | amount of bill statement; BILL_AMNT1 = amount of bill statement in September, 2005; BILL_AMT2 = amount of bill statement in August, 2005; ...; BILL_AMT6 = amount of bill statement in April, 2005 |
-| **PAY_AMT1 - PAY_AMT6** | inputs | float | amount of previous payment; PAY_AMT1 = amount paid in September, 2005; PAY_AMT2 = amount paid in August, 2005; ...; PAY_AMT6 = amount paid in April, 2005 |
-| **high priced**| target | int | whether a customer's next payment is delinquent (late), 1 = late; 0 = on-time |
+| Name                      | Modeling Role | Measurement Level | Description                                                                                     |
+|---------------------------|---------------|-------------------|-------------------------------------------------------------------------------------------------|
+| high priced               | target        | binary            | Binary target indicating whether the APR charged for a mortgage is 1.5% or more above the survey-based estimate of similar mortgages    |
+| conforming                | input         | binary            | Binary numeric input indicating whether the mortgage conforms to normal standards (1) or is different (0)                              |
+| debt to income ratio std  | input         | numeric           | Standardized debt-to-income ratio for mortgage applicants                                        |
+| debt to income ratio missing  | input         | binary        | Binary numeric input serving as a missing marker (1) for debt-to-income ratio std                 |
+| income std                | input         | numeric           | Standardized income for mortgage applicants                                                     |
+| loan amount std           | input         | numeric           | Standardized amount of the mortgage for applicants                                              |
+| intro rate period std     | input         | numeric           | Standardized introductory rate period for mortgage applicants                                   |
+| loan to value ratio std   | input         | numeric           | Ratio of the mortgage size to the value of the property for mortgage applicants                 |
+| no intro rate period std  | input         | binary            | Binary numeric input indicating whether a mortgage does not include an introductory rate period |
+| property value std        | input         | numeric           | Value of the mortgaged property                                                                 |
+| term 360                  | input         | binary            | Binary numeric input indicating whether the mortgage is a standard 360-month mortgage (1) or a different type (0)                  |
+
 
 * **Source of training data**: GWU Blackboard, email `jphall@gwu.edu` for more information
 * **How training data was divided into training and validation data**: 50% training, 25% validation, 25% test
