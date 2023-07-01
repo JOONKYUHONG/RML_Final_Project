@@ -119,6 +119,18 @@ rem_params = {'max_depth': 9,
 
 * **Alternative models considered** : Among the three models trained, namely Elastic Net, EBM, and XGBoost, the XGBoost model demonstrates superior performance in terms of test AUC when compared to the AUC obtained from the other two models.
 
+### Ethical considerations
+
+* **Describe potential negative impacts of using your group’s best remediated model** :
+ * Consider math or software problems
+ * Consider real-world risks: who, what, when and how?
+* **Describe potential uncertainties relating to the impacts of using your group’s best remediated
+model**:
+ * Consider math or software problems
+ * Consider real-world risks: who, what, when and how?
+* **Describe any unexpected or results encountered during training**
+
+
 
 – Intended use (2 pts.)
 
