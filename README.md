@@ -121,7 +121,16 @@ rem_params = {'max_depth': 9,
 ![Global Features](GlobalImportances.png)
 
 ![Local Features](LocalImportances.png)
-![Partial Dependence](partialdependence.png)
+![Partial Dependence1](PD_1.png)
+![Partial Dependence2](PD_2.png)
+![Partial Dependence3](PD_3.png)
+![Partial Dependence4](PD_4.png)
+![Partial Dependence5](PD_5.png)
+![Partial Dependence6](PD_6.png)
+![Partial Dependence7](PD_7.png)
+![Partial Dependence8](PD_8.png)
+![Partial Dependence9](PD_9.png)
+![Partial Dependence10](PD_10.png)
 
 #### Visualization of AIR vs. AUC for Bias testing
 ![AIR VS AUC](AIR VS AUC.png)
