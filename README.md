@@ -116,12 +116,15 @@ rem_params = {'max_depth': 9,
 #### Correlation Heatmap
 ![Correlation Heatmap](images/Correlation.png)
 
-*Basic correlation from our data.
+* **Basic correlation from our data.**
 
 #### Post-hoc Explanation 
 ![Global Features](images/Global.png)
 
+* **Global Features** 
 ![Local Features](images/Local.png)
+
+* **local feature importance for the individuals at the 10th, 50th, and 90th percentiles of predicted probability** 
 ![Partial Dependence1](images/PD_1.png)
 ![Partial Dependence2](images/PD_2.png)
 ![Partial Dependence3](images/PD_3.png)
@@ -133,15 +136,17 @@ rem_params = {'max_depth': 9,
 ![Partial Dependence9](images/PD_9.png)
 ![Partial Dependence10](images/PD_10.png)
 
+* **Plot Feature Behavior**
+* 
 #### Visualization of AIR vs. AUC for Bias testing
 ![AIR VS AUC](images/AIR_AUC.png)
 
-*Since we need to retrain most accurate model above 0.8 AIR, it is important to check the plots for AIR vs AUC.
+* **Since we need to retrain most accurate model above 0.8 AIR, it is important to check the plots for AIR vs AUC.**
 
 #### Becision tree model for red teaming
 ![Stolen decision tree model](images/stolen.png)
 
-* A basic flow chart for how the XGB model works.
+* **A basic flow chart for how the XGB model works.**
 
 #### Model Debugging - Residual analysis
 ![Residual plot](images/Residual_plot.png)
