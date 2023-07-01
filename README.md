@@ -59,19 +59,30 @@
 * **State any differences in columns between training and test data**: Training data contains 23 rows, while Test data contains 22 rows since we need to predict the target variable and probabiltiy when we test the best remediated model. 
 
 ### Model details
-* **Columns used as inputs in the final model**: ['property_value_std','debt_to_income_ratio_missing','debt_to_income_ratio_std','income_std','intro_rate_period_std']
-* **Column(s) used as target(s) in the final model**: 'DELINQ_NEXT'
-* **Type of model**: Decision Tree 
-* **Software used to implement the model**: Python, scikit-learn
-* **Version of the modeling software**: 0.22.2.post1
+* **Columns used as inputs in the final model**:
+```
+rem_x_names = ['property_value_std',
+ 'debt_to_income_ratio_missing',
+ 'debt_to_income_ratio_std',
+ 'income_std',
+ 'intro_rate_period_std']
+```
+* **Column(s) used as target(s) in the final model**: 'high_priced'
+* **Type of model**: XGBoost
+* **Software used to implement the model**: Python, xgboost
+* **Version of the modeling software**: 1.7.5
 * **Hyperparameters or other settings of your model**: 
 ```
-DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
-                       max_depth=6, max_features=None, max_leaf_nodes=None,
-                       min_impurity_decrease=0.0, min_impurity_split=None,
-                       min_samples_leaf=1, min_samples_split=2,
-                       min_weight_fraction_leaf=0.0, presort='deprecated',
-                       random_state=12345, splitter='best')
+rem_params = {'max_depth': 9,
+ 'learning_rate': 0.05,
+ 'subsample': 0.8,
+ 'colsample_bytree': 0.6,
+ 'min_child_weight': 10,
+ 'gamma': 0.3,
+ 'reg_alpha': 0.0,
+ 'reg_lambda': 1.5,
+ 'n_jobs': -1,
+ 'random_state': 12345}
 ```
 ### Quantitative Analysis
 
