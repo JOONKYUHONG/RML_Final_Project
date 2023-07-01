@@ -114,8 +114,8 @@ rem_params = {'max_depth': 9,
 (*Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
 
 #### Correlation Heatmap
-
 * **Basic correlation from our data.**
+  
 ![Correlation Heatmap](images/Correlation.png)
 
 
