@@ -108,9 +108,9 @@ rem_params = {'max_depth': 9,
  
 | Train AUC | Validation AUC | Test AUC |
 | ------ | ------- | -------- |
-| 0.3456 | 0.7891  | 0.7687|
+| 0.7991 | 0.7765 | 0.779|
 
-
+(*Train AUC and Validation AUC taken from [RML_Assignment5_Joonkyu_Hong.ipynb](https://github.com/JOONKYUHONG/DNSC6290_RML/blob/main/RML_Assignment%205_Joonkyu%20Hong.ipynb))
 (*Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
 
 #### Correlation Heatmap
