@@ -118,9 +118,9 @@ rem_params = {'max_depth': 9,
 *Basic correlation from our data.
 
 #### Post-hoc Explanation 
-![Global Features](GlobalImportances.png)
+![Global Features](Global.png)
 
-![Local Features](LocalImportances.png)
+![Local Features](Local.png)
 ![Partial Dependence1](PD_1.png)
 ![Partial Dependence2](PD_2.png)
 ![Partial Dependence3](PD_3.png)
@@ -133,14 +133,15 @@ rem_params = {'max_depth': 9,
 ![Partial Dependence10](PD_10.png)
 
 #### Visualization of AIR vs. AUC for Bias testing
-![AIR VS AUC](AIR VS AUC.png)
+![AIR VS AUC](AIR_AUC.png)
 *Since we need to retrain most accurate model above 0.8 AIR, it is important to check the plots for AIR vs AUC.
 
 #### Becision tree model for red teaming
 ![Stolen decision tree model](stolen.png)
-* An attacker has a basic flow chart for how the XGB model works. 
-#### Correlation Heatmap
-![Residual plot](Residual plot.png)
+* A basic flow chart for how the XGB model works.
+
+#### Model Debugging - Residual analysis
+![Residual plot](Residual_plot.png)
 
 * **Alternative models considered** : Among the three models trained, namely Lasso, EBM, and XGBoost, the XGBoost model demonstrates superior performance in terms of test AUC when compared to the AUC obtained from the other two models.
 
