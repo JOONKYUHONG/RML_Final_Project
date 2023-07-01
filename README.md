@@ -115,6 +115,7 @@ rem_params = {'max_depth': 9,
 
 #### Correlation Heatmap
 ![Correlation Heatmap](images/Correlation.png)
+
 *Basic correlation from our data.
 
 #### Post-hoc Explanation 
@@ -134,10 +135,12 @@ rem_params = {'max_depth': 9,
 
 #### Visualization of AIR vs. AUC for Bias testing
 ![AIR VS AUC](images/AIR_AUC.png)
+
 *Since we need to retrain most accurate model above 0.8 AIR, it is important to check the plots for AIR vs AUC.
 
 #### Becision tree model for red teaming
 ![Stolen decision tree model](images/stolen.png)
+
 * A basic flow chart for how the XGB model works.
 
 #### Model Debugging - Residual analysis
