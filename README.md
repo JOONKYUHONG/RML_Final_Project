@@ -23,11 +23,11 @@
 
 ### Intended Use
 
-* **Business Value**: The best remediated model will contribute to the lender's long-term success, profitability, and sustainability in the mortgage lending industry.
-* **Objective**: The best remediated model can be used as an essential method or approach for identifying potential predatory lending practices, protecting consumers, promoting fair lending, ensuring market transparency, and facilitating accurate risk assessment for investors.
-* **Intended Users** : The best remediated model can be customized to cater to the diverse needs of stakeholders across the mortgage industry, encompassing lenders, regulators, borrowers, and investors.
-* **Any Additional** : GWU Students pursuing research projects or theses related to housing finance, consumer protection, or lending practices can utilize the model's predictions as a valuable data source. They can analyze the deviations in APRs, assess the impact on borrowers, and explore potential solutions to address unfair lending practices
-
+* **Business Value**: Enhancing educational value for students studying mortgage lending in an academic setting.
+* **Objective**: Providing practical experience in responsible machine learning projects for educational purposes.
+* **Intended Users** : MSBA students and educators in the academic context of responsible machine learning.
+* **Additional Information** : Valuable educational resource for GWU students.
+  
 ### Training Data
 
 * Data dictionary: 
@@ -53,51 +53,62 @@
   * Training rows: 112253 rows
   * Validation rows: 48085 rows
 
-### Evaluation (test) Data
+
 * **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
 * **Number of rows in test data**: 19831 rows.
 * **State any differences in columns between training and test data**: Training data contains 23 rows, while Test data contains 22 rows since we need to predict the target variable and probabiltiy when we test the best remediated model. 
 
+### Evaluation (test) Data
+
+* **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
+* **Number of rows in test data**: 19831 rows.
+* **Differences in columns between training and test data**: The training data contains 23 columns, while the test data contains 22 columns since we need to predict the target variable and probability when testing the best remediated model.
 ### Model details
 * **Columns used as inputs in the final model**:
 ```
-rem_x_names = ['property_value_std',
- 'debt_to_income_ratio_missing',
- 'debt_to_income_ratio_std',
+
+rem_x_names = ['term_360',
+ 'no_intro_rate_period_std',
+ 'property_value_std',
+ 'intro_rate_period_std',
  'income_std',
- 'intro_rate_period_std']
+ 'debt_to_income_ratio_std',
+ 'conforming']
+
 ```
 * **Column(s) used as target(s) in the final model**: 'high_priced'
 * **Type of model**: XGBoost
 * **Software used to implement the model**: Python, xgboost
-* **Version of the modeling software**: 1.7.5
+* **Version of the modeling software**: 3.10.9, 1.7.5
 * **Hyperparameters or other settings of your model**: 
 ```
 rem_params = {'max_depth': 9,
  'learning_rate': 0.05,
- 'subsample': 0.8,
+ 'subsample': 1.0,
  'colsample_bytree': 0.6,
- 'min_child_weight': 10,
- 'gamma': 0.3,
- 'reg_alpha': 0.0,
- 'reg_lambda': 1.5,
+ 'min_child_weight': 5,
+ 'gamma': 0.1,
+ 'reg_alpha': 0.1,
+ 'reg_lambda': 1.0,
  'n_jobs': -1,
  'random_state': 12345}
 ```
 ### Quantitative Analysis
 
-* Models were assessed primarily with AUC and AIR. See details below:
-
-| Train AUC | Validation AUC | Test AUC |
-| ------ | ------- | -------- |
-| 0.3456 | 0.7891  | 0.7687* |
-
+* Metrics used to evaluate the best remediated model:
+  
 | Group | Validation AIR |
 |-------|-----|
-| Black vs. White | 0.8345 |
-| Hispanic vs. White | 0.8765 |
-| Asian vs. White | 1.098 |
-| Female vs. Male | 1.245 |
+| Asian vs. White | 1.148|
+| Black vs. White | 0.806 |
+| Hispanic vs. White | 0.875|
+| Female vs. Male | 0.945 |
+
+* Values of the metrics for training, validation, and evaluation (or test) data
+ 
+| Train AUC | Validation AUC | Test AUC |
+| ------ | ------- | -------- |
+| 0.3456 | 0.7891  | 0.7687|
 
 
 (*Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
