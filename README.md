@@ -22,6 +22,11 @@
 
 
 ### Intended Use
+
+* **Describe the business value of your group’s best remediated model**: This remediated model can be an essential method or approach for identifying potential predatory lending practices, protecting consumers, promoting fair lending, ensuring market transparency, and facilitating accurate risk assessment for investors.
+∗ **Describe how your group’s best remediated model is designed to be used**: 
+∗ **Describe the intended users for your group’s best remediated model**
+∗ **State whether your group’s best remediated model can or cannot be used for any additional**
 * **Primary intended uses**: This model is an *example* probability of default classifier, with an *example* use case for determining eligibility for a credit line increase.
 * **Primary intended users**: All GWU students and faculty with permission.
 * **Out-of-scope use cases**: Any use beyond an educational example is out-of-scope.
@@ -96,6 +101,7 @@ DecisionTreeClassifier(ccp_alpha=0.0, class_weight=None, criterion='gini',
 ![Correlation Heatmap](download.png)
 
 – Intended use (2 pts.)
+
 ∗ Describe the business value of your group’s best remediated model
 ∗ Describe how your group’s best remediated model is designed to be used
 ∗ Describe the intended users for your group’s best remediated model
