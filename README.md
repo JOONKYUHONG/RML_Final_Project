@@ -137,7 +137,7 @@ rem_params = {'max_depth': 9,
 ![Partial Dependence10](images/PD_10.png)
 
 * **Plot Feature Behavior**
-* 
+  
 #### Visualization of AIR vs. AUC for Bias testing
 ![AIR VS AUC](images/AIR_AUC.png)
 
