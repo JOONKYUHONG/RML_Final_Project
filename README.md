@@ -99,8 +99,6 @@ rem_params = {'max_depth': 9,
 | ------ | ------- | -------- |
 | 0.7991 | 0.7765 | 0.779|
 
-   * (*Train AUC and Validation AUC taken from [RML_Assignment5_Joonkyu_Hong.ipynb](https://github.com/JOONKYUHONG/DNSC6290_RML/blob/main/RML_Assignment%205_Joonkyu%20Hong.ipynb))
-
    * (*Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
 
 #### Correlation Heatmap
@@ -162,49 +160,4 @@ rem_params = {'max_depth': 9,
 
    * Consider real-world risks: who, what, when and how? : Consider a scenario in which the government introduces new regulations or policies that directly impact the mortgage lending industry.  In such a situation, utilizing our group's best remediated model to predict mortgage lending outcomes can introduce uncertainties. The model may not have been trained on data that incorporates the newly implemented policy changes, leading to potential inaccuracies in its predictions or suboptimal decision-making. By continuously monitoring and adapting the model to reflect the evolving regulatory landscape, we can mitigate uncertainties and improve its performance in real-world applications.
     
-* **Describe any unexpected or results encountered during training**: During the evaluation of my remediated XGBoost model, I encountered an error when running it with the test data. The error arose due to a feature shape mismatch, specifically between the valid[rem_x_names] DataFrame, which had 9 columns, and the test[x_names] DataFrame, which had 10 columns. This mismatch caused the error to occur. Curiously, I also observed a similar situation with the EBM model from the example code, where the valid[rem_x_names] DataFrame had 8 columns and the test[x_names] DataFrame had 10 columns. However, unlike the XGBoost model, the EBM model did not encounter a feature shape mismatch error when tested with the test data. Upon seeking assistance from Prof. Hall, I came to realize that XGBoost is quite particular in its requirements. It expects only the feature names it encountered during training to be present when making predictions. As a result, to obtain accurate test results with the XGBoost model, I needed to ensure that I provided exactly the remediated features that were used during training. By following Prof. Hall's advice and supplying the XGBoost model with the exact remediated features, I was able to successfully obtain the desired test results. This experience highlighted the importance of adhering to XGBoost's specific feature name requirements to avoid shape mismatch errors and ensure the model functions correctly during testing.
-
-
-
-– Intended use (2 pts.)
-
-∗ Describe the business value of your group’s best remediated model
-∗ Describe how your group’s best remediated model is designed to be used
-∗ Describe the intended users for your group’s best remediated model
-∗ State whether your group’s best remediated model can or cannot be used for any additional
-purposes
-– Training data (2 pts.)
-∗ State the source of training data
-∗ State how training data was divided into training and validation data
-∗ State the number of rows in training and validation data
-∗ Define the meaning of all training data columns
-∗ Define the meaning of all engineered columns
-– Evaluation data (2 pts.)
-∗ State the source of evaluation (or test) data
-∗ State the number of rows in evaluation (or test) data
-∗ State any differences in columns between training and evaluation (or test) data
-– Model details (2 pts.)
-∗ State the columns used as inputs in your group’s best remediated model
-∗ State the columns used as targets in your group’s best remediated model
-∗ State the type of your group’s best remediated model
-∗ State the software used to implement your group’s best remediated model
-∗ State the version of the modeling software for your group’s best remediated model
-∗ State the hyperparameters or other settings of your group’s best remediated model
-– Quantitative analysis (3 pts.)
-∗ State the metrics used to evaluate your group’s best remediated model
-∗ State the values of the metrics for training, validation, and evaluation (or test) data – evaluation (or test) metrics come from the most recent class full evaluation results, link under
-Assignment 1.
-∗ Provide at least one plot or table from each weekly assignment for a total of at least six plots,
-that must include the global variable importance and partial dependence of your group’s best
-remediated model.
-∗ Address other alternative models considered
-– Ethical considerations (2 pts.)
-2
-∗ Describe potential negative impacts of using your group’s best remediated model:
-· Consider math or software problems
-· Consider real-world risks: who, what, when and how?
-∗ Describe potential uncertainties relating to the impacts of using your group’s best remediated
-model:
-· Consider math or software problems
-· Consider real-world risks: who, what, when and how?
-∗ Describe any unexpected or results encountered during training
+* **Describe any unexpected or results encountered during training**: During testing, a feature shape mismatch error occurred with the XGBoost model due to differences in the number of columns between the valid and test data. However, the EBM model did not encounter this error. Adhering to XGBoost's feature name requirements resolved the issue and ensured accurate test results.
