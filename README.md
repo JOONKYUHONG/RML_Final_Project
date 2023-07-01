@@ -95,7 +95,7 @@ rem_params = {'max_depth': 9,
 ```
 ### Quantitative Analysis
 
-* Metrics used to evaluate the best remediated model:
+* **Metrics used to evaluate the best remediated model**:
   
 | Group | Validation AIR |
 |-------|-----|
@@ -114,7 +114,11 @@ rem_params = {'max_depth': 9,
 (*Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
 
 #### Correlation Heatmap
-![Correlation Heatmap](download.png)
+![Correlation Heatmap](correlation.png)
+
+
+∗ **Alternative models considered** : Among the three models trained, namely Elastic Net, EBM, and XGBoost, the XGBoost model demonstrates superior performance in terms of test AUC when compared to the AUC obtained from the other two models.
+
 
 – Intended use (2 pts.)
 
