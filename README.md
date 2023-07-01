@@ -114,17 +114,20 @@ rem_params = {'max_depth': 9,
 (*Test AUC taken from https://github.com/jphall663/GWU_rml/blob/master/assignments/model_eval_2023_06_21_12_52_47.csv)
 
 #### Correlation Heatmap
-![Correlation Heatmap](images/Correlation.png)
 
 * **Basic correlation from our data.**
+![Correlation Heatmap](images/Correlation.png)
+
 
 #### Post-hoc Explanation 
-![Global Features](images/Global.png)
 
 * **Global Features** 
-![Local Features](images/Local.png)
+![Global Features](images/Global.png)
 
 * **local feature importance for the individuals at the 10th, 50th, and 90th percentiles of predicted probability** 
+![Local Features](images/Local.png)
+
+* **Plot Feature Behavior**
 ![Partial Dependence1](images/PD_1.png)
 ![Partial Dependence2](images/PD_2.png)
 ![Partial Dependence3](images/PD_3.png)
@@ -136,19 +139,23 @@ rem_params = {'max_depth': 9,
 ![Partial Dependence9](images/PD_9.png)
 ![Partial Dependence10](images/PD_10.png)
 
-* **Plot Feature Behavior**
   
 #### Visualization of AIR vs. AUC for Bias testing
-![AIR VS AUC](images/AIR_AUC.png)
 
 * **Since we need to retrain most accurate model above 0.8 AIR, it is important to check the plots for AIR vs AUC.**
+![AIR VS AUC](images/AIR_AUC.png)
+
+
 
 #### Becision tree model for red teaming
-![Stolen decision tree model](images/stolen.png)
 
 * **A basic flow chart for how the XGB model works.**
+![Stolen decision tree model](images/stolen.png)
+
 
 #### Model Debugging - Residual analysis
+
+* **Basic residual analysis can help identify outliers and reveal any underlying issues that may affect the model's accuracy and reliability.**
 ![Residual plot](images/Residual_plot.png)
 
 * **Alternative models considered** : Among the three models trained, namely Lasso, EBM, and XGBoost, the XGBoost model demonstrates superior performance in terms of test AUC when compared to the AUC obtained from the other two models.
