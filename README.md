@@ -122,12 +122,12 @@ rem_params = {'max_depth': 9,
 ### Ethical considerations
 
 * **Describe potential negative impacts of using your group’s best remediated model** :
- * Consider math or software problems
- * Consider real-world risks: who, what, when and how?
+  * Consider math or software problems
+  * Consider real-world risks: who, what, when and how?
 * **Describe potential uncertainties relating to the impacts of using your group’s best remediated
 model**:
- * Consider math or software problems
- * Consider real-world risks: who, what, when and how?
+  * Consider math or software problems
+  * Consider real-world risks: who, what, when and how?
 * **Describe any unexpected or results encountered during training**
 
 
