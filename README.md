@@ -118,9 +118,9 @@ rem_params = {'max_depth': 9,
 *Basic correlation from our data.
 
 #### Post-hoc Explanation 
-![Global Features](Correlation.png)
-![Local Features](Correlation.png)
-![Partial Dependence](Correlation.png)
+![Global Features](Global Importances.png)
+![Local Features](Local Importances.png)
+![Partial Dependence](partial dependence.png)
 
 #### Visualization of AIR vs. AUC for Bias testing
 ![AIR VS AUC](AIR VS AUC.png)
