@@ -117,7 +117,7 @@ rem_params = {'max_depth': 9,
 ![Correlation Heatmap](Correlation.png)
 
 
-∗ **Alternative models considered** : Among the three models trained, namely Elastic Net, EBM, and XGBoost, the XGBoost model demonstrates superior performance in terms of test AUC when compared to the AUC obtained from the other two models.
+* **Alternative models considered** : Among the three models trained, namely Elastic Net, EBM, and XGBoost, the XGBoost model demonstrates superior performance in terms of test AUC when compared to the AUC obtained from the other two models.
 
 
 – Intended use (2 pts.)
