@@ -121,14 +121,17 @@ rem_params = {'max_depth': 9,
 
 ### Ethical considerations
 
-* **Describe potential negative impacts of using your group’s best remediated model** :
-  * Consider math or software problems
-  * Consider real-world risks: who, what, when and how?
-* **Describe potential uncertainties relating to the impacts of using your group’s best remediated
-model**:
-  * Consider math or software problems
-  * Consider real-world risks: who, what, when and how?
-* **Describe any unexpected or results encountered during training**
+* **Describe potential negative impacts of using your group’s best remediated model** : 
+  * Consider math or software problems: As mathematical and statistical software and libraries continuously evolve and update, it is crucial to ensure compatibility with the specific version used during the model's development. If individuals employ a different version and obtain incorrect values, it can lead to unexpected risks or erroneous outcomes.
+
+  * Consider real-world risks: who, what, when and how?: While our model is primarily designed for educational purposes, caution must be exercised when applying it to real-life scenarios, such as predicting mortgage lending outcomes. The model may not account for all the intricacies and variables involved in the real world, potentially leading to less accurate predictions and suboptimal decision-making. If one of college student has limited knowledge and experience in the nuances and limitations of machine learning models, he or she may not fully comprehend the assumptions made during model development or the potential risks associated with relying solely on model predictions for financial decision-making.
+
+* **Describe potential uncertainties relating to the impacts of using your group’s best remediated model**:
+  * Consider math or software problems: The mathematical model can encompass intricate algorithms and calculations. The complexity of the model can introduce uncertainty when it comes to understanding and interpreting the results. It can be challenging for the model to accurately capture the underlying mathematical concepts and determine whether the implemented calculations are free from errors. 
+
+   * Consider real-world risks: who, what, when and how? : Consider a scenario in which the government introduces new regulations or policies that directly impact the mortgage lending industry.  In such a situation, utilizing our group's best remediated model to predict mortgage lending outcomes can introduce uncertainties. The model may not have been trained on data that incorporates the newly implemented policy changes, leading to potential inaccuracies in its predictions or suboptimal decision-making. By continuously monitoring and adapting the model to reflect the evolving regulatory landscape, we can mitigate uncertainties and improve its performance in real-world applications.
+    
+* **Describe any unexpected or results encountered during training**: During the evaluation of my remediated XGBoost model, I encountered an error when running it with the test data. The error arose due to a feature shape mismatch, specifically between the valid[rem_x_names] DataFrame, which had 9 columns, and the test[x_names] DataFrame, which had 10 columns. This mismatch caused the error to occur. Curiously, I also observed a similar situation with the EBM model from the example code, where the valid[rem_x_names] DataFrame had 8 columns and the test[x_names] DataFrame had 10 columns. However, unlike the XGBoost model, the EBM model did not encounter a feature shape mismatch error when tested with the test data. Upon seeking assistance from Prof. Hall, I came to realize that XGBoost is quite particular in its requirements. It expects only the feature names it encountered during training to be present when making predictions. As a result, to obtain accurate test results with the XGBoost model, I needed to ensure that I provided exactly the remediated features that were used during training. By following Prof. Hall's advice and supplying the XGBoost model with the exact remediated features, I was able to successfully obtain the desired test results. This experience highlighted the importance of adhering to XGBoost's specific feature name requirements to avoid shape mismatch errors and ensure the model functions correctly during testing.
 
 
 
