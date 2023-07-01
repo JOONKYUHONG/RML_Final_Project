@@ -23,13 +23,10 @@
 
 ### Intended Use
 
-* **Describe the business value of your group’s best remediated model**: This remediated model can be an essential method or approach for identifying potential predatory lending practices, protecting consumers, promoting fair lending, ensuring market transparency, and facilitating accurate risk assessment for investors.
-∗ **Describe how your group’s best remediated model is designed to be used**: 
-∗ **Describe the intended users for your group’s best remediated model**
-∗ **State whether your group’s best remediated model can or cannot be used for any additional**
-* **Primary intended uses**: This model is an *example* probability of default classifier, with an *example* use case for determining eligibility for a credit line increase.
-* **Primary intended users**: All GWU students and faculty with permission.
-* **Out-of-scope use cases**: Any use beyond an educational example is out-of-scope.
+* **Business Value**: The best remediated model will contribute to the lender's long-term success, profitability, and sustainability in the mortgage lending industry.
+* **Objective**: The best remediated model can be used as an essential method or approach for identifying potential predatory lending practices, protecting consumers, promoting fair lending, ensuring market transparency, and facilitating accurate risk assessment for investors.
+* **Intended Users** : The best remediated model can be customized to cater to the diverse needs of stakeholders across the mortgage industry, encompassing lenders, regulators, borrowers, and investors.
+* **Any Additional** : GWU Students pursuing research projects or theses related to housing finance, consumer protection, or lending practices can utilize the model's predictions as a valuable data source. They can analyze the deviations in APRs, assess the impact on borrowers, and explore potential solutions to address unfair lending practices
 
 ### Training Data
 
@@ -56,16 +53,13 @@
   * Training rows: 112253 rows
   * Validation rows: 48085 rows
 
-### Test Data
+### Evaluation (test) Data
 * **Source of test data**: GWU Blackboard, email `jphall@gwu.edu` for more information
-* **Number of rows in test data**: 19831
-* **State any differences in columns between training and test data**: Training data contains 23 rows, while Test data contains 22 rows since we need to predict the target variable.
+* **Number of rows in test data**: 19831 rows.
+* **State any differences in columns between training and test data**: Training data contains 23 rows, while Test data contains 22 rows since we need to predict the target variable and probabiltiy when we test the best remediated model. 
 
 ### Model details
-* **Columns used as inputs in the final model**: 'LIMIT_BAL',
-       'PAY_0', 'PAY_2', 'PAY_3', 'PAY_4', 'PAY_5', 'PAY_6', 'BILL_AMT1',
-       'BILL_AMT2', 'BILL_AMT3', 'BILL_AMT4', 'BILL_AMT5', 'BILL_AMT6',
-       'PAY_AMT1', 'PAY_AMT2', 'PAY_AMT3', 'PAY_AMT4', 'PAY_AMT5', 'PAY_AMT6'
+* **Columns used as inputs in the final model**: ['property_value_std','debt_to_income_ratio_missing','debt_to_income_ratio_std','income_std','intro_rate_period_std']
 * **Column(s) used as target(s) in the final model**: 'DELINQ_NEXT'
 * **Type of model**: Decision Tree 
 * **Software used to implement the model**: Python, scikit-learn
