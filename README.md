@@ -30,7 +30,7 @@
   
 ### Training Data
 
-* Data dictionary: 
+* Data dictionary: Originally, the dataset contained over 20 columns, but for the project's purpose, the focus was narrowed down to the main factors that significantly influence the primary target variable.
 
 | Name                      | Modeling Role | Measurement Level | Description                                                                                     |
 |---------------------------|---------------|-------------------|-------------------------------------------------------------------------------------------------|
