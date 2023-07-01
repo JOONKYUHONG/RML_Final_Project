@@ -118,30 +118,30 @@ rem_params = {'max_depth': 9,
 *Basic correlation from our data.
 
 #### Post-hoc Explanation 
-![Global Features](Global.png)
+![Global Features](images/Global.png)
 
-![Local Features](Local.png)
-![Partial Dependence1](PD_1.png)
-![Partial Dependence2](PD_2.png)
-![Partial Dependence3](PD_3.png)
-![Partial Dependence4](PD_4.png)
-![Partial Dependence5](PD_5.png)
-![Partial Dependence6](PD_6.png)
-![Partial Dependence7](PD_7.png)
-![Partial Dependence8](PD_8.png)
-![Partial Dependence9](PD_9.png)
-![Partial Dependence10](PD_10.png)
+![Local Features](images/Local.png)
+![Partial Dependence1](images/PD_1.png)
+![Partial Dependence2](images/PD_2.png)
+![Partial Dependence3](images/PD_3.png)
+![Partial Dependence4](images/PD_4.png)
+![Partial Dependence5](images/PD_5.png)
+![Partial Dependence6](images/PD_6.png)
+![Partial Dependence7](images/PD_7.png)
+![Partial Dependence8](images/PD_8.png)
+![Partial Dependence9](images/PD_9.png)
+![Partial Dependence10](images/PD_10.png)
 
 #### Visualization of AIR vs. AUC for Bias testing
-![AIR VS AUC](AIR_AUC.png)
+![AIR VS AUC](images/AIR_AUC.png)
 *Since we need to retrain most accurate model above 0.8 AIR, it is important to check the plots for AIR vs AUC.
 
 #### Becision tree model for red teaming
-![Stolen decision tree model](stolen.png)
+![Stolen decision tree model](images/stolen.png)
 * A basic flow chart for how the XGB model works.
 
 #### Model Debugging - Residual analysis
-![Residual plot](Residual_plot.png)
+![Residual plot](images/Residual_plot.png)
 
 * **Alternative models considered** : Among the three models trained, namely Lasso, EBM, and XGBoost, the XGBoost model demonstrates superior performance in terms of test AUC when compared to the AUC obtained from the other two models.
 
